@@ -87,7 +87,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/11/21/Chromium%20Learning%20Guides/">Guides&#39;</a>
+      <a class="p-name article-title" href="/2023/11/21/Chromium%20Learning%20Guides/">Chromium Learning Guides</a>
     </h1>
   
 
@@ -101,33 +101,33 @@
 <h2 id="个人学习计划："><a href="#个人学习计划：" class="headerlink" title="个人学习计划："></a>个人学习计划：</h2><p>最终，你配好了编译环境，编译成功，准备开始写代码了。如果我们有时间阅读完所有的代码并理解之后才开始写第一行代码，那就完美了。当然，那是不可能的，boss没时间等你阅读完并理解所有的代码，大概我们自己也没有耐心阅读完所有的代码。我们应该怎么做呢？我们建议你根据自己的实际需要制定学习计划，下面推荐一些切入点：Chromium已经有一些高质量的设计文档 <a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents">http://www.chromium.org/developers/design-documents</a>。有的可能比较陈旧了，但无碍于帮助理解代码的整体组织方式。</p>
 <ul>
 <li>1、阅读最重要的几个开发文档<ul>
-<li>1、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/multi-process-architecture">http://www.chromium.org/developers/design-documents/multi-process-architecture</a></li>
-<li>2、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/displaying-a-web-page-in-chrome">http://www.chromium.org/developers/design-documents/displaying-a-web-page-in-chrome</a></li>
-<li>3、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/inter-process-communication">http://www.chromium.org/developers/design-documents/inter-process-communication</a></li>
-<li>4、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/threading">http://www.chromium.org/developers/design-documents/threading</a></li>
-<li>5、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code">http://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code</a></li>
+<li>1、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/multi-process-architecture">多进程架构</a></li>
+<li>2、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/displaying-a-web-page-in-chrome">在 Chrome 浏览器中显示网页</a></li>
+<li>3、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/inter-process-communication">进程间通信</a></li>
+<li>4、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/design-documents/threading">线程</a></li>
+<li>5、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code">浏览 Chrome 浏览器源代码</a></li>
 </ul>
 </li>
 <li>2、看项目组是否有相关的指引文档 – 同事可能已经写了相关的文档，你可以进行参考以避免走弯路</li>
 <li>3、学习相关代码约定<ul>
-<li>1、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/coding-style/important-abstractions-and-data-structures">http://www.chromium.org/developers/coding-style/important-abstractions-and-data-structures</a></li>
-<li>2、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/smart-pointer-guidelines">http://www.chromium.org/developers/smart-pointer-guidelines</a></li>
-<li>3、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/chromium-string-usage">http://www.chromium.org/developers/chromium-string-usage</a></li>
+<li>1、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/coding-style/important-abstractions-and-data-structures">重要的抽象和数据结构</a></li>
+<li>2、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/smart-pointer-guidelines">智能指针指南</a></li>
+<li>3、<a target="_blank" rel="noopener" href="http://www.chromium.org/developers/chromium-string-usage">Chromium 字符串的使用</a></li>
 </ul>
 </li>
 <li>4、如果时间允许，浏览一遍所有的设计文档，阅读相关的部分</li>
-<li>5、擅用代码搜索（或者你自己的代码浏览工具）</li>
-<li>6、学习怎么样找到了解相关代码的人员</li>
+<li>5、擅用代码搜索（<a target="_blank" rel="noopener" href="https://www.chromium.org/developers/code-browsing-in-chromium/">或者你自己的代码浏览工具</a>）</li>
+<li>6、学习怎么样找到了解相关代码的人员(<a target="_blank" rel="noopener" href="https://www.chromium.org/developers/finding-somebody-who-knows-how-a-piece-of-code-works">如何找到知道代码如何工作的人</a>)</li>
 <li>7、对你要学习的代码进行调试，使用调试工具，打印log等</li>
 <li>8、注意区分哪些是需要理解的，哪些是目前所理解的。例如，如果你的团队正在做很多GUI编程，那么也许你应该花点时间学习GTK+，Win32, 或者Cocoa编程。</li>
 </ul>
-<h2 id="Blink："><a href="#Blink：" class="headerlink" title="Blink："></a>Blink：</h2><p>有时，你需要深入到blink（以前的webkit），以fix一个bug或者添加一个新功能。<br>这里有一篇关于“Webkit工作原理”的文档 <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/pub?id=1ZRIQbUKw9Tf077odCh66OrrwRIVNLvI_nhLm2Gi__F0">https://docs.google.com/presentation/pub?id=1ZRIQbUKw9Tf077odCh66OrrwRIVNLvI_nhLm2Gi__F0</a>。<br>尽管Blink已经不同步Webkit了，但其中很多东西还是没有变。<br>这篇文档解释了webkit开发的基本流程： <a target="_blank" rel="noopener" href="http://dev.chromium.org/developers/webkit-development-workflow">http://dev.chromium.org/developers/webkit-development-workflow</a>；</p>
+<h2 id="Blink："><a href="#Blink：" class="headerlink" title="Blink："></a>Blink：</h2><p>有时，你需要深入到blink（以前的webkit），以fix一个bug或者添加一个新功能。<br>这里有一篇关于“Webkit工作原理”的文档 &quot;<a target="_blank" rel="noopener" href="https://docs.google.com/presentation/pub?id=1ZRIQbUKw9Tf077odCh66OrrwRIVNLvI_nhLm2Gi__F0">How Webkit works&quot; slide deck</a>。<br>尽管Blink已经不同步Webkit了，但其中很多东西还是没有变。<br>这篇文档解释了webkit开发的基本流程： <a target="_blank" rel="noopener" href="http://dev.chromium.org/developers/webkit-development-workflow">http://dev.chromium.org/developers/webkit-development-workflow</a>；</p>
 <p>参考：<br>1、<a target="_blank" rel="noopener" href="https://www.chromium.org/developers/learning-your-way-around-the-code/">https://www.chromium.org/developers/learning-your-way-around-the-code/</a><br>2、<a target="_blank" rel="noopener" href="https://blog.csdn.net/wy5761/article/details/44095055">https://blog.csdn.net/wy5761/article/details/44095055</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/21/Chromium%20Learning%20Guides/" data-id="clp78blx60000t4su3a7pfs51" data-title="Guides&#39;" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/21/Chromium%20Learning%20Guides/" data-id="clp790aos0000w4suasgfgb4x" data-title="Chromium Learning Guides" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -178,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/21/hello-world/" data-id="clp78blxa0001t4suhova3hfg" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/21/hello-world/" data-id="clp790aow0001w4sugeflhis9" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -221,7 +221,7 @@
       <ul>
         
           <li>
-            <a href="/2023/11/21/Chromium%20Learning%20Guides/">Guides&#39;</a>
+            <a href="/2023/11/21/Chromium%20Learning%20Guides/">Chromium Learning Guides</a>
           </li>
         
           <li>
